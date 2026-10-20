@@ -31,6 +31,7 @@ a{color:var(--acc);text-underline-offset:3px}
 .ln{width:2px;height:22px;background:var(--line)}
 .badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px}
 .badge.ok{background:var(--ok-bg);color:var(--ok)}.badge.un{background:var(--un-bg);color:var(--un)}
+.sibs{max-width:640px;text-align:center;color:var(--mut);font-size:.9rem;margin:6px auto 0}
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:.92rem;color:var(--mut)}
 .person{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:14px}
 .person header{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
@@ -56,16 +57,17 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
   <h2>Rodokmen</h2>
   <div class="tree" aria-label="Rodokmen">
     <div class="gen">
-      <div class="node un"><b>Bartoloměj Maun (?)</b><span>sedlák, Ostrov u Prachatic (?) · otec Terezie</span></div>
-      <div class="node un"><b>Dorota</b><span>manželka Bartoloměje · matka Terezie</span></div>
+      <div class="node ok"><b>Bartoloměj Maun</b><span>sedlák, Ostrov čp. 7 (farnost Prachatice) · otec Terezie</span></div>
+      <div class="node un"><b>Dorota</b><span>manželka Bartoloměje · rodné příjmení nejisté</span></div>
     </div>
     <div class="ln"></div>
     <div class="gen">
       <div class="node ok"><b>Josef Krejsa</b><span>sedlák, Šumavské Hoštice čp. 12 · zemřel před 1882</span></div>
-      <div class="node ok"><b>Terezie Krejsová</b><span>roz. Maun, z Ostrova čp. 18 · zemřela před 1882</span></div>
+      <div class="node ok"><b>Terezie Krejsová</b><span>roz. Maunová, z Ostrova · zemřela před 1882</span></div>
     </div>
     <div class="ln"></div>
-    <div class="gen"><div class="node ok"><b>Kateřina Krejsová</b><span>* 7. 3. 1829, Šumavské Hoštice čp. 12</span></div><div class="node ok"><b>František Krejsa</b><span>její bratr, sedlák na čp. 12 · doložen 1882</span></div></div>
+    <div class="gen"><div class="node ok"><b>Kateřina Krejsová</b><span>* 7. 3. 1829, Šumavské Hoštice čp. 12</span></div></div>
+    <p class="sibs">Sourozenci (všichni čp. 12): Regina * 22. 5. 1818 · Marianna * 18. 11. 1819 · Ondřej * 18. 11. 1821 · dítě * 5. 4. 1824 († v dětství) · František, později sedlák na čp. 12 (doložen 1882)</p>
     <div class="ln"></div>
     <div class="gen"><div class="node ok"><b>Josef Krejsa</b><span>* 30. 9. 1852, Šumavské Hoštice čp. 12 · nemanželský syn</span></div></div>
     <div class="ln"></div>
@@ -131,10 +133,11 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
   <article class="person" id="terezie">
     <header><h3>Terezie Krejsová</h3><span class="badge ok">doloženo</span></header>
     <dl>
-      <dt>Rodné příjmení</dt><dd>Maun, z Ostrova čp. 18, okres Prachatice (zápis vnuka Ondřeje 1882) <span class="badge un">čtení příjmení nejisté</span></dd>
-      <dt>Rodiče</dt><dd>Bartoloměj (Bartl), sedlák, a Dorota (Dorothea) <span class="badge un">nejisté</span></dd>
+      <dt>Rodné příjmení</dt><dd>Maunová, z Ostrova (farnost Prachatice) – stejně ve 4 křestních zápisech dětí 1818–1829 i v zápisu vnuka 1882</dd>
+      <dt>Rodiče</dt><dd>Bartoloměj Maun, sedlák v Ostrově čp. 7, a Dorota (Dorothea) <span class="badge un">její rodné příjmení nejisté</span></dd>
       <dt>Úmrtí</dt><dd>před 14. 11. 1882</dd>
-      <dt>Doložena</dt><dd>1829 jako matka Kateřiny; 1852 jako babička Josefa</dd>
+      <dt>Děti</dt><dd>Regina (1818), Marianna (1819), Ondřej (1821), dítě (1824, zemřelo), <a href="#katerina-1829">Kateřina</a> (1829), František</dd>
+      <dt>Sňatek</dt><dd>nejspíš 1817 nebo dříve – první dítě 1818; v Hošticích zápis není, hledáme ve farnosti Prachatice</dd>
       <dt>Narození</dt><dd>zatím nenalezeno</dd>
     </dl>
   </article>
@@ -146,6 +149,7 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
     <li><b>20. 10. 2026</b> – Matrika narozených 1860–1885 (kniha 7846, snímek 169): Ondřej Krejsa, * 14. 11. 1882 na čp. 12, syn Františka Krejsy, sedláka, „manželského syna † Josefa Krejsy, sedláka z Hoštic č. 12, a manželky † Terezie, rodem Maun z Ostrova č. 18“. František je tedy Kateřinin bratr a dědic čp. 12; děti narozené na čp. 12 v letech 1870–1882 jsou nejspíš jeho.</li>
     <li><b>20. 10. 2026</b> – Úmrtí „Josef Krejsa, nájemník, Hoštice č. 12, 14. 4. 1885“ (kniha 7850, snímek 99): ženatý, 56 let – není to Josef narozený 1852.</li>
     <li><b>20. 10. 2026</b> – Matrika oddaných Šumavské Hoštice, roky 1817–1830 (kniha 7847): sňatek Josefa Krejsy a Terezie nenalezen.</li>
+    <li><b>21. 10. 2026</b> – Matrika N Šumavské Hoštice (kniha 7845, snímky 20–40): na čp. 12 se Josefu Krejsovi a Terezii, „dceři Bartoloměje Mauna, sedláka z Ostrova č. 7, a Doroty“, narodili Regina 22. 5. 1818 (sn. 22), Marianna 18. 11. 1819 (sn. 25), Ondřej 18. 11. 1821 (sn. 29) a dítě 5. 4. 1824 (sn. 34). V letech 1815–1817 na čp. 12 žádné jejich dítě není.</li>
     <li><b>20. 10. 2026</b> – Farnost Bušanovice (rodina podle vzpomínek později žila v Bušanovicích): rejstřík oddaných 1655–1902 (kniha 6782), písmeno K – žádný Krejsa. Dobrovolnický rejstřík sňatků 1925–1938 (kniha 12279) – žádný Krejsa.</li>
   </ol>
   <p class="lead"><b>Co hledáme dál:</b> sňatek a děti Josefa Krejsy (* 1852), spojení k dnešním generacím, narození Josefa staršího a Terezie, přesné čtení Tereziina rodného příjmení.</p>
