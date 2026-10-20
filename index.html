@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
-:root{--bg:#f6f2ea;--card:#fffdf8;--ink:#2a2620;--mut:#6d655a;--line:#e2d9c9;--acc:#7a4a24;--ok:#2f6b3a;--ok-bg:#e5f0e4;--un:#8a5a00;--un-bg:#fbefd6;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#211e1a;--ink:#ece5d8;--mut:#a89e8f;--line:#3a342c;--acc:#d9a46b;--ok:#8fd19a;--ok-bg:#1f3322;--un:#e8b85a;--un-bg:#3a2d12;color-scheme:dark}}
+:root{--bg:#f6f2ea;--card:#fffdf8;--ink:#2a2620;--mut:#6d655a;--line:#e2d9c9;--acc:#7a4a24;--ok:#2f6b3a;--ok-bg:#e5f0e4;--un:#8a5a00;--un-bg:#fbefd6;--kr:#3d5a8a;--kr-bg:#e3eaf6;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#211e1a;--ink:#ece5d8;--mut:#a89e8f;--line:#3a342c;--acc:#d9a46b;--ok:#8fd19a;--ok-bg:#1f3322;--un:#e8b85a;--un-bg:#3a2d12;--kr:#9db8e8;--kr-bg:#1d2a40;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "Source Sans 3",system-ui,sans-serif}
 main{max-width:980px;margin:0 auto;padding:32px 16px 64px}
@@ -27,6 +27,7 @@ a{color:var(--acc);text-underline-offset:3px}
 .node{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:200px;max-width:280px;text-align:center}
 .node b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem;font-weight:600}
 .node span{color:var(--mut);font-size:.9rem}
+.node.kr{border-left:5px solid var(--kr)}.badge.kr{background:var(--kr-bg);color:var(--kr)}
 .node.ok{border-left:5px solid var(--ok)}.node.un{border-left:5px dashed var(--un)}.node.gap{border-style:dashed;color:var(--mut)}
 .ln{width:2px;height:22px;background:var(--line)}
 .badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px}
@@ -57,14 +58,18 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
   <h2>Rodokmen</h2>
   <div class="tree" aria-label="Rodokmen">
     <div class="gen">
-      <div class="node ok"><b>Bartoloměj Maun</b><span>sedlák, Ostrov čp. 7 (farnost Prachatice) · otec Terezie</span></div>
-      <div class="node un"><b>Dorota</b><span>manželka Bartoloměje · rodné příjmení nejisté</span></div>
+      <div class="node kr"><b>Matouš Krejsa</b><span>† 1827 · sedlák, Šumavské Hoštice</span></div>
+      <div class="node kr"><b>Magdalena Kotrcová</b><span>† 1817 · Chlumany</span></div>
+      <div class="node kr"><b>Bartoloměj Maun</b><span>1757–1841 · sedlák, Ostrov čp. 7</span></div>
+      <div class="node kr"><b>Dorota Varcabová</b><span>1757–1842 · Ostrov</span></div>
     </div>
+    <p class="sibs">sňatky: Krejsa × Kotrcová 1785 · Maun × Varcabová 1781</p>
     <div class="ln"></div>
     <div class="gen">
-      <div class="node ok"><b>Josef Krejsa</b><span>sedlák, Šumavské Hoštice čp. 12 · zemřel před 1882</span></div>
-      <div class="node ok"><b>Terezie Krejsová</b><span>roz. Maunová, z Ostrova · zemřela před 1882</span></div>
+      <div class="node ok"><b>Josef Krejsa</b><span>* 2. 3. 1790 Chlumany čp. 41 · † 17. 6. 1866 Hoštice čp. 12 · sedlák</span></div>
+      <div class="node ok"><b>Terezie Maunová</b><span>* 21. 9. 1788 Ostrov · † 8. 3. 1869 Hoštice čp. 12</span></div>
     </div>
+    <p class="sibs">sňatek 1817</p>
     <div class="ln"></div>
     <div class="gen"><div class="node ok"><b>Kateřina Krejsová</b><span>* 7. 3. 1829, Šumavské Hoštice čp. 12</span></div></div>
     <p class="sibs">Sourozenci (všichni čp. 12): Regina * 22. 5. 1818 · Marianna * 18. 11. 1819 · Ondřej * 18. 11. 1821 · dítě * 5. 4. 1824 († v dětství) · František, později sedlák na čp. 12 (doložen 1882)</p>
@@ -80,6 +85,7 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
   <div class="legend">
     <span><span class="badge ok">doloženo</span> zápis v matrice</span>
     <span><span class="badge un">nejisté</span> jméno je v zápisu, čtení příjmení nebo místa zatím nejisté</span>
+    <span><span class="badge kr">kronika</span> podle rodinné kroniky, zatím neověřeno v matrice</span>
     <span>bez pruhu = údaj od rodiny</span>
   </div>
 
@@ -140,6 +146,11 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
       <dt>Sňatek</dt><dd>nejspíš 1817 nebo dříve – první dítě 1818; v Hošticích zápis není, hledáme ve farnosti Prachatice</dd>
       <dt>Narození</dt><dd>zatím nenalezeno</dd>
     </dl>
+  </article>
+
+  <article class="person" id="kronika">
+    <header><h3>Z rodinné kroniky</h3><span class="badge kr">kronika</span></header>
+    <p>Rodinná kronika (str. 25) uvádí data, která v matrikách teprve ověřujeme: narození a úmrtí Josefa Krejsy (2. 3. 1790 Chlumany čp. 41 – 17. 6. 1866 Hoštice čp. 12) a Terezie Maunové (21. 9. 1788 Ostrov – 8. 3. 1869 Hoštice čp. 12), jejich sňatek roku 1817 a o generaci starší předky: Matouše Krejsu († 1827) s Magdalenou Kotrcovou († 1817, sňatek 1785) a Bartoloměje Mauna (1757–1841) s Dorotou Varcabovou (1757–1842, sňatek 1781). Se zápisy z matrik se kronika shoduje: první dítě Josefa a Terezie se narodilo 1818 a Terezie je v matrice vždy „dcera Bartoloměje Mauna, sedláka z Ostrova“.</p>
   </article>
 
   <h2>Deník hledání</h2>
