@@ -29,6 +29,7 @@ a{color:var(--acc);text-underline-offset:3px}
 .node{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:200px;max-width:280px;text-align:center}
 .node b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem;font-weight:600}
 .node span{color:var(--mut);font-size:.9rem}
+.node .f{display:block;text-align:left;line-height:1.35}.node .f i{display:inline-block;width:1.2em;font-style:normal;color:var(--ink,inherit);font-weight:600}
 .node.kr{border-left:5px solid var(--kr)}.badge.kr{background:var(--kr-bg);color:var(--kr)}
 .node.ok{border-left:5px solid var(--ok)}.node.un{border-left:5px dashed var(--un)}.node.gap{border-style:dashed;color:var(--mut)}
 .ln{width:2px;height:22px;background:var(--line)}
@@ -66,63 +67,64 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
   <p class="lead">Předci z maminčiny strany. Údaje pocházejí z digitalizovaných matrik Státního oblastního archivu v Třeboni. U každé osoby je odkaz na snímek zápisu, jeho výřez a přepis. Údaje o posledních generacích pocházejí od rodiny, ne z matrik.</p>
 
   <h2>Rodokmen</h2>
+  <p class="sibs">* narození (křest) · † úmrtí · ∞ sňatek · ⌂ povolání a bydliště · ? zatím neznámé </p>
   <div class="tree" aria-label="Rodokmen">
     <div class="gen">
-      <div class="node ok"><b>Vojtěch (Albert) Maun</b><span>sedlák/chalupník, Ostrov · děti Jakub 1680, Regina 1682, Jan 1685, Petr 1687, Václav 1692, Uršula · † 1697–1700</span></div>
-      <div class="node ok"><b>Magdalena</b><span>žena Vojtěcha Mauna · matka Petra (křest 1687)</span></div>
+      <div class="node ok"><b>Vojtěch (Albert) Maun</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>1697–1700</span><span class="f"><i>∞</i>před 1680 Magdalena</span><span class="f"><i>⌂</i>sedlák/chalupník, Ostrov</span></div>
+      <div class="node ok"><b>Magdalena</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>Vojtěch Maun</span><span class="f"><i>⌂</i>Ostrov</span></div>
+    </div>
+    <p class="sibs">Děti: Jakub 1680, Regina 1682, Jan 1685, Petr 1687, Václav 1692, Uršula</p>
+    <div class="ln"></div>
+    <div class="gen">
+      <div class="node ok"><b>Petr Maun</b><span class="f"><i>*</i>3. 6. 1687 Ostrov</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>26. 1. 1721 Terezie</span><span class="f"><i>⌂</i>podruh, Ostrov</span></div>
+      <div class="node ok"><b>Terezie Kaderžávková(?)</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1721 Petr Maun</span><span class="f"><i>⌂</i>Ostrov</span></div>
+      <div class="node ok"><b>Vavřinec Schißl</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>Gertruda(?)</span><span class="f"><i>⌂</i>sedlák, Ostrov</span></div>
+    </div>
+    <p class="sibs">V Ostrově tehdy dva Vavřinci Schißlové (ženy Alžběta a Gertruda). Schißlové v Ostrově už 1721; 1728 se oženil Jakub Maun, syn Jana Mauna z Ostrova – snad Petrův příbuzný.</p>
+    <div class="ln"></div>
+    <div class="gen">
+      <div class="node kr"><b>Martin Krejsa</b><span class="f"><i>*</i>asi 1727–1729</span><span class="f"><i>†</i>12. 3. 1785</span><span class="f"><i>∞</i>Johana</span><span class="f"><i>⌂</i>sedlák, Hoštice čp. 16</span></div>
+      <div class="node kr"><b>Johana</b><span class="f"><i>*</i>asi 1731</span><span class="f"><i>†</i>30. 10. 1807 Hoštice</span><span class="f"><i>∞</i>Martin Krejsa</span><span class="f"><i>⌂</i>Hoštice čp. 16</span></div>
+      <div class="node ok"><b>Jan Maun</b><span class="f"><i>*</i>9. 5. 1728 Ostrov (pravděpodobně)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>21. 11. 1756 Magdalena Schißlová</span><span class="f"><i>⌂</i>sedlák, Ostrov čp. 7</span></div>
+      <div class="node ok"><b>Magdalena Schißlová</b><span class="f"><i>*</i>26. 5. 1733 Ostrov (pravděpodobně)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1756 Jan Maun</span><span class="f"><i>⌂</i>Ostrov čp. 7</span></div>
+      <div class="node ok"><b>Pavel Varcaba</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>před 1781</span><span class="f"><i>∞</i>30. 9. 1753 Marie Anna (předtím Uršula, Veronika)</span><span class="f"><i>⌂</i>sedlák, Ostrov</span></div>
+      <div class="node ok"><b>Marie Anna Gehlíková(?)</b><span class="f"><i>*</i>? (z Chlistova)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1753 Pavel Varcaba</span><span class="f"><i>⌂</i>Ostrov</span></div>
+    </div>
+    <p class="sibs">Martin a Johana: údaje z mamčina rodokmenu (soupis poddaných 1777: Martin 49 let, Johanna 44; děti Matouš 1752/53, Uršula, Anna 1761, Jiří 1765) – v matrice zatím neověřeno.</p>
+    <div class="ln"></div>
+    <div class="gen">
+      <div class="node ok"><b>Matouš Krejsa</b><span class="f"><i>*</i>asi 1755 (rodokmen 1752/53)</span><span class="f"><i>†</i>1827 (kronika)</span><span class="f"><i>∞</i>8. 5. 1785 Marie Magdalena Kotrcová</span><span class="f"><i>⌂</i>Chlumany čp. 41</span></div>
+      <div class="node ok"><b>Marie Magdalena Kotrcová</b><span class="f"><i>*</i>asi 1761</span><span class="f"><i>†</i>1817 (kronika)</span><span class="f"><i>∞</i>1785 Matouš Krejsa</span><span class="f"><i>⌂</i>Chlumany čp. 41</span></div>
+      <div class="node ok"><b>Bartoloměj Maun</b><span class="f"><i>*</i>15. 8. 1757 Ostrov</span><span class="f"><i>†</i>1841 Ostrov</span><span class="f"><i>∞</i>1781 Dorota Varcabová</span><span class="f"><i>⌂</i>sedlák, Ostrov čp. 7</span></div>
+      <div class="node ok"><b>Dorota Varcabová</b><span class="f"><i>*</i>29. 12. 1757 Ostrov</span><span class="f"><i>†</i>1842 Ostrov</span><span class="f"><i>∞</i>1781 Bartoloměj Maun</span><span class="f"><i>⌂</i>Ostrov čp. 7</span></div>
     </div>
     <div class="ln"></div>
     <div class="gen">
-      <div class="node ok"><b>Petr Maun</b><span>* 3. 6. 1687 Ostrov (křest) · syn Vojtěcha Mauna a Magdaleny · podruh · sňatek 26. 1. 1721 · otec Jana</span></div>
-      <div class="node ok"><b>Terezie</b><span>dcera Jiřího Kaderžávka(?) · sňatek s Petrem Maunem 1721</span></div>
-      <div class="node ok"><b>Vavřinec Schißl</b><span>sedlák, Ostrov · otec Magdaleny · v Ostrově tehdy dva Vavřinci (ženy Alžběta a Gertruda)</span></div>
+      <div class="node ok"><b>Josef Krejsa</b><span class="f"><i>*</i>2. 3. 1790 Chlumany čp. 41</span><span class="f"><i>†</i>17. 6. 1866 Hoštice čp. 12</span><span class="f"><i>∞</i>1817 Terezie Maunová</span><span class="f"><i>⌂</i>sedlák, Hoštice čp. 12</span></div>
+      <div class="node ok"><b>Terezie Maunová</b><span class="f"><i>*</i>21. 9. 1788 Ostrov (kronika)</span><span class="f"><i>†</i>8. 3. 1869 Hoštice čp. 12</span><span class="f"><i>∞</i>1817 Josef Krejsa</span><span class="f"><i>⌂</i>Hoštice čp. 12</span></div>
     </div>
-    <p class="sibs">V Ostrově žili Schißlové už dřív: 16. 2. 1721 se provdala Uršula, dcera Pavla Schißla z Ostrova (oddaní, sn. 122). Roku 1728 se oženil Jakub Maun (Mon), syn Jana Mauna z Ostrova – snad Petrův příbuzný (sn. 142).</p>
+    <p class="sibs">Sourozenci Kateřiny (čp. 12): Regina 1818 · Marianna 1819 · Ondřej 1821 · dítě 1824 († v dětství) · František, sedlák na čp. 12</p>
     <div class="ln"></div>
     <div class="gen">
-      <div class="node kr"><b>Martin Krejsa</b><span>* asi 1727–1729 · † 12. 3. 1785 · sedlák, Šumavské Hoštice čp. 16</span></div>
-      <div class="node kr"><b>Johana</b><span>* asi 1731 · † 30. 10. 1807 (rodokmen; farní rejstřík uvádí „listopad 1807“) · Hoštice čp. 16</span></div>
-      <div class="node ok"><b>Jan Maun</b><span>* 9. 5. 1728 (křest, pravděpodobně on) · syn Petra Mauna a Terezie · sňatek 21. 11. 1756 · sedlák, Ostrov čp. 7</span></div>
-      <div class="node ok"><b>Magdalena</b><span>dcera Vavřince Schißla, sedláka z Ostrova · * pravděpodobně 26. 5. 1733 · sňatek 1756</span></div>
-      <div class="node ok"><b>Pavel Varcaba</b><span>sedlák, Ostrov · † před 1781 · otec Doroty (matrika 1757, 1781)</span></div>
-      <div class="node ok"><b>Marie Anna</b><span>dcera † Víta Gehlíka(?), sedláka z Chlistova · 2. žena Pavla Varcaby, sňatek 1753</span></div>
+      <div class="node ok"><b>Kateřina Krejsová</b><span class="f"><i>*</i>7. 3. 1829 Hoštice čp. 12</span><span class="f"><i>†</i>? (v Hošticích 1852–1913 ne)</span><span class="f"><i>∞</i>11. 2. 1862 Kajetán Kříž, obecní pastýř</span><span class="f"><i>⌂</i>Hoštice; 1862 Dvory?</span></div>
     </div>
-    <p class="sibs">Soupis poddaných panství Vimperk 1777, Hoštice čp. 16: Martin Krejßa 49 let, sedlák; Johanna žena 44; Anna 16; Jiří 12. Děti: Matouš (* 1752/53), Uršula, Anna (1761), Jiří (1765). (mamčin rodokmen)</p>
     <div class="ln"></div>
     <div class="gen">
-      <div class="node ok"><b>Matouš Krejsa</b><span>sňatek 1785 a otcovství 1790 v matrice · * 1752/53 podle rodokmenu, ale podle věku při sňatku asi 1755 (nesoulad) · † 1827 (kronika) · Chlumany čp. 41</span></div>
-      <div class="node ok"><b>Marie Magdalena Kotrcová</b><span>sňatek 1785 v matrice · * asi 1761 (z věku) · † 1817 (kronika) · Chlumany</span></div>
-      <div class="node ok"><b>Bartoloměj Maun</b><span>* 15. 8. 1757 Ostrov (matrika) · syn Jana Mauna a Magdaleny · sňatek 1781 · † 1841 Ostrov · sedlák, Ostrov čp. 7</span></div>
-      <div class="node ok"><b>Dorota Varcabová</b><span>* 29. 12. 1757 Ostrov (matrika) · dcera Pavla Varcaby a Marie Anny · sňatek 1781 · † 1842 Ostrov (rejstřík)</span></div>
+      <div class="node ok"><b>Josef Krejsa</b><span class="f"><i>*</i>30. 9. 1852 Hoštice čp. 12 (nemanželský)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1886 Kateřina Drabešová</span><span class="f"><i>⌂</i>1886 Předslavice čp. 1, pak sedlák čp. 20</span></div>
+      <div class="node ok"><b>Kateřina Drabešová</b><span class="f"><i>*</i>? (Malenice, kronika)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1886 Josef Krejsa (7. 1. podle kroniky)</span><span class="f"><i>⌂</i>Předslavice čp. 20</span></div>
     </div>
-    <p class="sibs">sňatky: Krejsa × Kotrcová 8. 5. 1785 Chlumany (matrika) · Maun × Varcabová 25. 11.(?) 1781 Prachatice (matrika)</p>
+    <p class="sibs">V rejstřících dětí je matka „Marie“ – totožnost se zatím neověřila.</p>
     <div class="ln"></div>
     <div class="gen">
-      <div class="node ok"><b>Josef Krejsa</b><span>sedlák · * 2. 3. 1790 Chlumany čp. 41 · † 17. 6. 1866 Hoštice čp. 12 (obojí matrika)</span></div>
-      <div class="node ok"><b>Terezie Maunová</b><span>* 21. 9. 1788 Ostrov (kronika, neověřeno) · † 8. 3. 1869 Hoštice čp. 12 (matrika)</span></div>
-    </div>
-    <p class="sibs">sňatek 1817 ve farnosti Prachatice, zápis vedený u vsi Ostrov (farní rejstřík)</p>
-    <div class="ln"></div>
-    <div class="gen"><div class="node ok"><b>Kateřina Krejsová</b><span>* 7. 3. 1829, Šumavské Hoštice čp. 12 · ∞ 11. 2. 1862 Kajetán Kříž, obecní pastýř ve Dvorech</span></div></div>
-    <p class="sibs">Sourozenci (všichni čp. 12): Regina * 22. 5. 1818 · Marianna * 18. 11. 1819 · Ondřej * 18. 11. 1821 · dítě * 5. 4. 1824 († v dětství) · František, později sedlák na čp. 12 (doložen 1882)</p>
-    <div class="ln"></div>
-    <div class="gen"><div class="node ok"><b>Josef Krejsa</b><span>* 30. 9. 1852, Šumavské Hoštice čp. 12 · nemanželský syn</span></div></div>
-    <div class="ln"></div>
-    <div class="gen">
-      <div class="node ok"><b>Kateřina Drabešová</b><span>sňatek 1886 v rejstříku (den 7. 1. podle kroniky) · rodiče Matěj Drabeš z Malenic čp. 41 a Anna roz. Hodonická (kronika) · v rejstřících dětí je matka „Marie“ – totožnost zatím neověřena</span></div>
-    </div>
-    <p class="sibs">Sňatek 1886 Josef Krejsa (Předslavice čp. 1) × Kateřina Drabešová v rejstříku oddaných; nejpozději 1890 bydlí na čp. 20, kde je podle kroniky sedlákem</p>
-    <div class="ln"></div>
-    <div class="gen">
-      <div class="node ok"><b>Josef Krejsa</b><span>* 7. 11. 1890 Předslavice čp. 20 (rejstřík narozených) · panský kočí a hudebník, Předslavice a Želibořice čp. 11</span></div>
-      <div class="node ok"><b>Růžena Nečinová</b><span>* 25. 1. 1891 Úlehle čp. 3 (rejstřík; otec Václav, matka Anežka) · sňatek 16. 9. 1919 Předslavice (kronika)</span></div>
+      <div class="node ok"><b>Josef Krejsa</b><span class="f"><i>*</i>7. 11. 1890 Předslavice čp. 20</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>16. 9. 1919 Růžena Nečinová (kronika)</span><span class="f"><i>⌂</i>panský kočí a hudebník, Želibořice čp. 11</span></div>
+      <div class="node ok"><b>Růžena Nečinová</b><span class="f"><i>*</i>25. 1. 1891 Úlehle čp. 3</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1919 Josef Krejsa</span><span class="f"><i>⌂</i>Želibořice čp. 11</span></div>
     </div>
     <div class="ln"></div>
     <div class="gen"><div class="node gap"><b>…</b><span>propojení k Josefovi z Bušanovic – doplníme</span></div></div>
     <div class="ln"></div>
-    <div class="gen"><div class="node"><b>Josef Krejsa</b><span>Bušanovice</span></div></div>
+    <div class="gen"><div class="node"><b>Josef Krejsa</b><span class="f"><i>⌂</i>Bušanovice</span></div></div>
     <div class="ln"></div>
-    <div class="gen"><div class="node"><b>Helena Pechlátová</b><span>roz. Krejsová · * 1954, Bušanovice · podle rodiny</span></div></div>
+    <div class="gen"><div class="node"><b>Helena Pechlátová</b><span class="f"><i>*</i>1954, Bušanovice (roz. Krejsová, podle rodiny)</span></div></div>
   </div>
   <div class="legend">
     <span><span class="badge ok">doloženo</span> zápis v matrice</span>
