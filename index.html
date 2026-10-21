@@ -41,6 +41,7 @@ a{color:var(--acc);text-underline-offset:3px}
 .pin{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 13px/1 "Source Sans 3",system-ui,sans-serif;border:3px solid #fffdf8;box-shadow:0 2px 8px rgba(0,0,0,.35)}
 .mlegend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:.92rem;color:var(--mut)}
 .mlegend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:18px}.gal figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border:0;border-radius:0}.gal figcaption{padding:8px 10px;font-size:.9rem}.gal .cr{color:var(--mut);font-size:.78rem}
 .places{columns:2 260px;margin:12px 0 0;padding-left:0;list-style:none;font-size:.95rem}.places li{margin:3px 0;break-inside:avoid}
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:.92rem;color:var(--mut)}
 .person{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:14px}
@@ -121,17 +122,20 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
   <div id="mapa" role="img" aria-label="Mapa míst, kde žil rod Krejsů"></div>
   <div class="mlegend"><span><i style="background:#8a5a2b"></i>18. století</span><span><i style="background:#2f6b3a"></i>1. pol. 19. století</span><span><i style="background:#3d5a8a"></i>2. pol. 19. století</span><span><i style="background:#9b3d5c"></i>20. století</span><span><i style="background:#9a9184"></i>okolí, souvislosti</span></div>
   <ul class="places" id="mista"></ul>
+  <div class="gal"><figure><img src="img/foto_hostice.jpg" alt="Šumavské Hoštice" loading="lazy"><figcaption><b>Šumavské Hoštice</b> – grunty čp. 16 a 12 – rod Krejsů 1777–1891<br><span class="cr">Foto: <a href="https://commons.wikimedia.org/wiki/File:%C5%A0umavsk%C3%A9_Ho%C5%A1tice,_2019_(01).jpg" rel="noopener">Draceane</a>, CC BY-SA 4.0, Wikimedia Commons</span></figcaption></figure><figure><img src="img/foto_chlumany.jpg" alt="Chlumany" loading="lazy"><figcaption><b>Chlumany</b> – čp. 41 – Matouš Krejsa a Marie Kotrcová, 1785–1790<br><span class="cr">Foto: <a href="https://commons.wikimedia.org/wiki/File:Chlumany_-_pohled_ze_silnice_do_P%C4%9B%C4%8Dnova_01.jpg" rel="noopener">Petr1888</a>, CC BY-SA 4.0, Wikimedia Commons</span></figcaption></figure><figure><img src="img/foto_ostrov.jpg" alt="Ostrov u Prachatic" loading="lazy"><figcaption><b>Ostrov u Prachatic</b> – čp. 7 – grunt Maunů; Varcabové<br><span class="cr">Foto: <a href="https://commons.wikimedia.org/wiki/File:Ostrov_(u_Prachatic)_-_celkov%C3%BD_pohled_od_JV.jpg" rel="noopener">MartinVeselka</a>, CC BY-SA 4.0, Wikimedia Commons</span></figcaption></figure><figure><img src="img/foto_predslavice.jpg" alt="Předslavice" loading="lazy"><figcaption><b>Předslavice</b> – čp. 1 a 20 – Josef Krejsa (* 1852) a rodina<br><span class="cr">Foto: <a href="https://commons.wikimedia.org/wiki/File:Predslavice.jpg" rel="noopener">StaraBlazkova</a>, CC BY-SA 3.0, Wikimedia Commons</span></figcaption></figure><figure><img src="img/foto_malenice.jpg" alt="Malenice" loading="lazy"><figcaption><b>Malenice</b> – Drabešovi<br><span class="cr">Foto: <a href="https://commons.wikimedia.org/wiki/File:Malenice_as_seen_from_north_(01).jpg" rel="noopener">Czeva</a>, CC BY-SA 3.0, Wikimedia Commons</span></figcaption></figure><figure><img src="img/foto_ulehle.jpg" alt="Úlehle" loading="lazy"><figcaption><b>Úlehle</b> – čp. 3 – Nečinovi, Růžena 1891<br><span class="cr">Foto: <a href="https://commons.wikimedia.org/wiki/File:%C3%9Alehle_(P%C5%99edslavice),_n%C3%A1ves_II.jpg" rel="noopener">Juandev</a>, CC BY-SA 3.0, Wikimedia Commons</span></figcaption></figure><figure><img src="img/foto_zeliborice.jpg" alt="Želibořice" loading="lazy"><figcaption><b>Želibořice</b> – čp. 11 „Ve dvoře“ – Josef Krejsa (* 1890)<br><span class="cr">Foto: <a href="https://commons.wikimedia.org/wiki/File:%C5%BDelibo%C5%99ice,_ulice.jpg" rel="noopener">Juandev</a>, CC BY-SA 3.0, Wikimedia Commons</span></figcaption></figure></div>
+  <p class="sibs">Fotografie ukazují obce dnes; konkrétní domy rodiny na Wikimedia Commons nejsou – u každého místa v mapě je odkaz na pohled z ulice. Čísla popisná se od 18.–19. století mohla změnit.</p>
+
   <script>
   (function(){
     var M=[
-      [1,"Šumavské Hoštice čp. 16",49.0397,13.8719,"#8a5a2b","Rodný grunt: Martin Krejsa († 1785) a Johana. Soupis poddaných 1777."],
-      [2,"Chlumany čp. 41",49.0666,13.9654,"#8a5a2b","Matouš Krejsa a Marie Kotrcová, sňatek 8. 5. 1785; zde se 2. 3. 1790 narodil Josef Krejsa."],
-      [3,"Ostrov u Prachatic čp. 7",49.0286,14.0086,"#8a5a2b","Maunovi: Bartoloměj Maun a Dorota Varcabová; zde se roku 1788 narodila Terezie. (Poloha přibližná.)"],
-      [4,"Šumavské Hoštice čp. 12",49.0465,13.8805,"#2f6b3a","Josef Krejsa a Terezie Maunová (sňatek 1817); děti 1818–1829 včetně Kateřiny; 7. 3. 1829 Kateřina; 30. 9. 1852 nemanželský syn Josef."],
-      [5,"Předslavice čp. 1 a 20",49.1327,13.9356,"#3d5a8a","Josef Krejsa (* 1852): sňatek 1886, pak sedlák na čp. 20; 7. 11. 1890 syn Josef; 1891 dcera Marie †. Obec patřila k dietrichsteinskému panství Vlachovo Březí (zámeček, fara)."],
+      [1,"Šumavské Hoštice čp. 16",49.03908,13.87371,"#8a5a2b","Rodný grunt: Martin Krejsa († 1785) a Johana. Soupis poddaných 1777."],
+      [2,"Chlumany čp. 41",49.06686,13.96388,"#8a5a2b","Matouš Krejsa a Marie Kotrcová, sňatek 8. 5. 1785; zde se 2. 3. 1790 narodil Josef Krejsa."],
+      [3,"Ostrov u Prachatic čp. 7",49.02823,14.00706,"#8a5a2b","Maunovi: Bartoloměj Maun a Dorota Varcabová; zde se roku 1788 narodila Terezie. "],
+      [4,"Šumavské Hoštice čp. 12",49.03872,13.87237,"#2f6b3a","Josef Krejsa a Terezie Maunová (sňatek 1817); děti 1818–1829 včetně Kateřiny; 7. 3. 1829 Kateřina; 30. 9. 1852 nemanželský syn Josef."],
+      [5,"Předslavice čp. 1 a 20",49.13144,13.93553,"#3d5a8a","Josef Krejsa (* 1852): sňatek 1886, pak sedlák na čp. 20; 7. 11. 1890 syn Josef; 1891 dcera Marie †. Obec patřila k dietrichsteinskému panství Vlachovo Březí (zámeček, fara)."],
       [6,"Malenice čp. 41",49.1242,13.8889,"#3d5a8a","Drabešovi – rodina nevěsty Kateřiny Drabešové (kronika)."],
-      [7,"Úlehle čp. 3",49.1268,13.9258,"#9b3d5c","Zde se 25. 1. 1891 narodila Růžena Nečinová, žena Josefa (* 1890) (kronika)."],
-      [8,"Želibořice čp. 11 – „Ve dvoře“",49.1177,13.9338,"#9b3d5c","Josef Krejsa (* 1890), panský kočí a hudebník (kronika); místu se říkalo „Ve dvoře“. Želibořice patřily k panství Vlachovo Březí."],
+      [7,"Úlehle čp. 3",49.12675,13.92533,"#9b3d5c","Zde se 25. 1. 1891 narodila Růžena Nečinová, žena Josefa (* 1890) (kronika)."],
+      [8,"Želibořice čp. 11 – „Ve dvoře“",49.11754,13.93349,"#9b3d5c","Josef Krejsa (* 1890), panský kočí a hudebník (kronika); místu se říkalo „Ve dvoře“. Želibořice patřily k panství Vlachovo Březí."],
       [9,"Bušanovice",49.1045,13.9371,"#9b3d5c","Josef Krejsa, dědeček (podle rodiny); zde se narodila Helena."],
       [0,"Vlachovo Březí",49.0818,13.9588,"#9a9184","Panství Dietrichsteinů do roku 1858; patřily k němu i Předslavice, Bušanovice a Želibořice – místa, kde se usadil Josef (* 1852) a jeho potomci."]
     ];
@@ -143,10 +147,11 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
     var path=M.filter(function(m){return m[0]}).sort(function(a,b){return a[0]-b[0]}).map(function(m){return [m[2],m[3]]});
     L.polyline(path,{color:"#7a4a24",weight:3,opacity:.55,dashArray:"6 8"}).addTo(map);
     var b=[];
+    var FOTO={"1": "hostice", "4": "hostice", "2": "chlumany", "3": "ostrov", "5": "predslavice", "6": "malenice", "7": "ulehle", "8": "zeliborice"};
     M.forEach(function(m){
       var ic=L.divIcon({className:"",html:'<div class="pin" style="background:'+m[4]+'">'+(m[0]||"·")+'</div>',iconSize:[34,34],iconAnchor:[17,17]});
       var mk=L.marker([m[2],m[3]],{icon:ic,title:m[1]}).addTo(map);
-      var d=document.createElement("div");var t=document.createElement("b");t.textContent=m[1];d.appendChild(t);d.appendChild(document.createElement("br"));d.appendChild(document.createTextNode(m[5]));
+      var d=document.createElement("div");d.style.maxWidth="260px";var f=FOTO[m[0]];if(f){var im=document.createElement("img");im.src="img/foto_"+f+".jpg";im.alt=m[1];im.style.cssText="width:100%;border-radius:6px;margin-bottom:6px";d.appendChild(im);}var t=document.createElement("b");t.textContent=m[1];d.appendChild(t);d.appendChild(document.createElement("br"));d.appendChild(document.createTextNode(m[5]));d.appendChild(document.createElement("br"));var a=document.createElement("a");a.href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint="+m[2]+","+m[3];a.target="_blank";a.rel="noopener";a.textContent="Pohled z ulice (Google)";d.appendChild(a);d.appendChild(document.createTextNode(" · "));var a2=document.createElement("a");a2.href="https://mapy.cz/zakladni?q="+m[2]+"%2C"+m[3]+"&z=18";a2.target="_blank";a2.rel="noopener";a2.textContent="Mapy.cz";d.appendChild(a2);
       mk.bindPopup(d);b.push([m[2],m[3]]);
     });
     map.fitBounds(b,{padding:[30,30]});
