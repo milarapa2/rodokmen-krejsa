@@ -29,6 +29,7 @@ a{color:var(--acc);text-underline-offset:3px}
 .node{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:200px;max-width:280px;text-align:center}
 .node b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem;font-weight:600}
 .node span{color:var(--mut);font-size:.9rem}
+.pair{border:1px dashed var(--line);border-radius:16px;padding:8px 10px 10px}.pair .pl{font-size:.8rem;color:var(--mut);text-align:center;margin-bottom:6px;letter-spacing:.03em}.pair .pn{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
 .node .f{display:block;text-align:left;line-height:1.35}.node .f i{display:inline-block;width:1.2em;font-style:normal;color:var(--ink,inherit);font-weight:600}
 .node.kr{border-left:5px solid var(--kr)}.badge.kr{background:var(--kr-bg);color:var(--kr)}
 .node.ok{border-left:5px solid var(--ok)}.node.un{border-left:5px dashed var(--un)}.node.gap{border-style:dashed;color:var(--mut)}
@@ -70,33 +71,49 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
   <p class="sibs">* narození (křest) · † úmrtí · ∞ sňatek · ⌂ povolání a bydliště · ? zatím neznámé </p>
   <div class="tree" aria-label="Rodokmen">
     <div class="gen">
-      <div class="node ok"><b>Vojtěch (Albert) Maun</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>1697–1700</span><span class="f"><i>∞</i>před 1680 Magdalena</span><span class="f"><i>⌂</i>sedlák/chalupník, Ostrov</span></div>
-      <div class="node ok"><b>Magdalena</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>Vojtěch Maun</span><span class="f"><i>⌂</i>Ostrov</span></div>
+      <div class="pair"><div class="pl">rodiče Petra Mauna</div><div class="pn">
+        <div class="node ok"><b>Vojtěch (Albert) Maun</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>1697–1700</span><span class="f"><i>∞</i>před 1680 Magdalena</span><span class="f"><i>⌂</i>sedlák/chalupník, Ostrov</span></div>
+        <div class="node ok"><b>Magdalena</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>Vojtěch Maun</span><span class="f"><i>⌂</i>Ostrov</span></div>
+      </div></div>
     </div>
     <p class="sibs">Děti: Jakub 1680, Regina 1682, Jan 1685, Petr 1687, Václav 1692, Uršula</p>
     <div class="ln"></div>
     <div class="gen">
-      <div class="node ok"><b>Petr Maun</b><span class="f"><i>*</i>3. 6. 1687 Ostrov</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>26. 1. 1721 Terezie</span><span class="f"><i>⌂</i>podruh, Ostrov</span></div>
-      <div class="node ok"><b>Terezie Kaderžávková(?)</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1721 Petr Maun</span><span class="f"><i>⌂</i>Ostrov</span></div>
-      <div class="node ok"><b>Vavřinec Schißl</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>Gertruda(?)</span><span class="f"><i>⌂</i>sedlák, Ostrov</span></div>
+      <div class="pair"><div class="pl">rodiče Jana Mauna</div><div class="pn">
+        <div class="node ok"><b>Petr Maun</b><span class="f"><i>*</i>3. 6. 1687 Ostrov</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>26. 1. 1721 Terezie</span><span class="f"><i>⌂</i>podruh, Ostrov</span></div>
+        <div class="node ok"><b>Terezie Kaderžávková(?)</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1721 Petr Maun</span><span class="f"><i>⌂</i>Ostrov</span></div>
+      </div></div>
+      <div class="pair"><div class="pl">otec Magdaleny Schißlové</div><div class="pn">
+        <div class="node ok"><b>Vavřinec Schißl</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>Gertruda(?)</span><span class="f"><i>⌂</i>sedlák, Ostrov</span></div>
+      </div></div>
     </div>
     <p class="sibs">V Ostrově tehdy dva Vavřinci Schißlové (ženy Alžběta a Gertruda). Schißlové v Ostrově už 1721; 1728 se oženil Jakub Maun, syn Jana Mauna z Ostrova – snad Petrův příbuzný.</p>
     <div class="ln"></div>
     <div class="gen">
-      <div class="node kr"><b>Martin Krejsa</b><span class="f"><i>*</i>asi 1727–1729</span><span class="f"><i>†</i>12. 3. 1785</span><span class="f"><i>∞</i>Johana</span><span class="f"><i>⌂</i>sedlák, Hoštice čp. 16</span></div>
-      <div class="node kr"><b>Johana</b><span class="f"><i>*</i>asi 1731</span><span class="f"><i>†</i>30. 10. 1807 Hoštice</span><span class="f"><i>∞</i>Martin Krejsa</span><span class="f"><i>⌂</i>Hoštice čp. 16</span></div>
-      <div class="node ok"><b>Jan Maun</b><span class="f"><i>*</i>9. 5. 1728 Ostrov (pravděpodobně)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>21. 11. 1756 Magdalena Schißlová</span><span class="f"><i>⌂</i>sedlák, Ostrov čp. 7</span></div>
-      <div class="node ok"><b>Magdalena Schißlová</b><span class="f"><i>*</i>26. 5. 1733 Ostrov (pravděpodobně)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1756 Jan Maun</span><span class="f"><i>⌂</i>Ostrov čp. 7</span></div>
-      <div class="node ok"><b>Pavel Varcaba</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>před 1781</span><span class="f"><i>∞</i>30. 9. 1753 Marie Anna (předtím Uršula, Veronika)</span><span class="f"><i>⌂</i>sedlák, Ostrov</span></div>
-      <div class="node ok"><b>Marie Anna Gehlíková(?)</b><span class="f"><i>*</i>? (z Chlistova)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1753 Pavel Varcaba</span><span class="f"><i>⌂</i>Ostrov</span></div>
+      <div class="pair"><div class="pl">rodiče Matouše Krejsy</div><div class="pn">
+        <div class="node kr"><b>Martin Krejsa</b><span class="f"><i>*</i>asi 1727–1729</span><span class="f"><i>†</i>12. 3. 1785</span><span class="f"><i>∞</i>Johana</span><span class="f"><i>⌂</i>sedlák, Hoštice čp. 16</span></div>
+        <div class="node kr"><b>Johana</b><span class="f"><i>*</i>asi 1731</span><span class="f"><i>†</i>30. 10. 1807 Hoštice</span><span class="f"><i>∞</i>Martin Krejsa</span><span class="f"><i>⌂</i>Hoštice čp. 16</span></div>
+      </div></div>
+      <div class="pair"><div class="pl">rodiče Bartoloměje Mauna</div><div class="pn">
+        <div class="node ok"><b>Jan Maun</b><span class="f"><i>*</i>9. 5. 1728 Ostrov (pravděpodobně)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>21. 11. 1756 Magdalena Schißlová</span><span class="f"><i>⌂</i>sedlák, Ostrov čp. 7</span></div>
+        <div class="node ok"><b>Magdalena Schißlová</b><span class="f"><i>*</i>26. 5. 1733 Ostrov (pravděpodobně)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1756 Jan Maun</span><span class="f"><i>⌂</i>Ostrov čp. 7</span></div>
+      </div></div>
+      <div class="pair"><div class="pl">rodiče Doroty Varcabové</div><div class="pn">
+        <div class="node ok"><b>Pavel Varcaba</b><span class="f"><i>*</i>?</span><span class="f"><i>†</i>před 1781</span><span class="f"><i>∞</i>30. 9. 1753 Marie Anna (předtím Uršula, Veronika)</span><span class="f"><i>⌂</i>sedlák, Ostrov</span></div>
+        <div class="node ok"><b>Marie Anna Gehlíková(?)</b><span class="f"><i>*</i>? (z Chlistova)</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>1753 Pavel Varcaba</span><span class="f"><i>⌂</i>Ostrov</span></div>
+      </div></div>
     </div>
     <p class="sibs">Martin a Johana: údaje z mamčina rodokmenu (soupis poddaných 1777: Martin 49 let, Johanna 44; děti Matouš 1752/53, Uršula, Anna 1761, Jiří 1765) – v matrice zatím neověřeno.</p>
     <div class="ln"></div>
     <div class="gen">
-      <div class="node ok"><b>Matouš Krejsa</b><span class="f"><i>*</i>asi 1755 (rodokmen 1752/53)</span><span class="f"><i>†</i>1827 (kronika)</span><span class="f"><i>∞</i>8. 5. 1785 Marie Magdalena Kotrcová</span><span class="f"><i>⌂</i>Chlumany čp. 41</span></div>
-      <div class="node ok"><b>Marie Magdalena Kotrcová</b><span class="f"><i>*</i>asi 1761</span><span class="f"><i>†</i>1817 (kronika)</span><span class="f"><i>∞</i>1785 Matouš Krejsa</span><span class="f"><i>⌂</i>Chlumany čp. 41</span></div>
-      <div class="node ok"><b>Bartoloměj Maun</b><span class="f"><i>*</i>15. 8. 1757 Ostrov</span><span class="f"><i>†</i>1841 Ostrov</span><span class="f"><i>∞</i>1781 Dorota Varcabová</span><span class="f"><i>⌂</i>sedlák, Ostrov čp. 7</span></div>
-      <div class="node ok"><b>Dorota Varcabová</b><span class="f"><i>*</i>29. 12. 1757 Ostrov</span><span class="f"><i>†</i>1842 Ostrov</span><span class="f"><i>∞</i>1781 Bartoloměj Maun</span><span class="f"><i>⌂</i>Ostrov čp. 7</span></div>
+      <div class="pair"><div class="pl">rodiče Josefa Krejsy (1790)</div><div class="pn">
+        <div class="node ok"><b>Matouš Krejsa</b><span class="f"><i>*</i>asi 1755 (rodokmen 1752/53)</span><span class="f"><i>†</i>1827 (kronika)</span><span class="f"><i>∞</i>8. 5. 1785 Marie Magdalena Kotrcová</span><span class="f"><i>⌂</i>Chlumany čp. 41</span></div>
+        <div class="node ok"><b>Marie Magdalena Kotrcová</b><span class="f"><i>*</i>asi 1761</span><span class="f"><i>†</i>1817 (kronika)</span><span class="f"><i>∞</i>1785 Matouš Krejsa</span><span class="f"><i>⌂</i>Chlumany čp. 41</span></div>
+      </div></div>
+      <div class="pair"><div class="pl">rodiče Terezie Maunové</div><div class="pn">
+        <div class="node ok"><b>Bartoloměj Maun</b><span class="f"><i>*</i>15. 8. 1757 Ostrov</span><span class="f"><i>†</i>1841 Ostrov</span><span class="f"><i>∞</i>1781 Dorota Varcabová</span><span class="f"><i>⌂</i>sedlák, Ostrov čp. 7</span></div>
+        <div class="node ok"><b>Dorota Varcabová</b><span class="f"><i>*</i>29. 12. 1757 Ostrov</span><span class="f"><i>†</i>1842 Ostrov</span><span class="f"><i>∞</i>1781 Bartoloměj Maun</span><span class="f"><i>⌂</i>Ostrov čp. 7</span></div>
+      </div></div>
     </div>
     <div class="ln"></div>
     <div class="gen">
