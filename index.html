@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
 :root{--bg:#f6f2ea;--card:#fffdf8;--ink:#2a2620;--mut:#6d655a;--line:#e2d9c9;--acc:#7a4a24;--ok:#2f6b3a;--ok-bg:#e5f0e4;--un:#8a5a00;--un-bg:#fbefd6;--kr:#3d5a8a;--kr-bg:#e3eaf6;color-scheme:light}
 @media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#211e1a;--ink:#ece5d8;--mut:#a89e8f;--line:#3a342c;--acc:#d9a46b;--ok:#8fd19a;--ok-bg:#1f3322;--un:#e8b85a;--un-bg:#3a2d12;--kr:#9db8e8;--kr-bg:#1d2a40;color-scheme:dark}}
@@ -33,6 +35,13 @@ a{color:var(--acc);text-underline-offset:3px}
 .badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px}
 .badge.ok{background:var(--ok-bg);color:var(--ok)}.badge.un{background:var(--un-bg);color:var(--un)}
 .sibs{max-width:640px;text-align:center;color:var(--mut);font-size:.9rem;margin:6px auto 0}
+#mapa{height:min(70vh,560px);border-radius:14px;border:1px solid var(--line);margin-top:12px;background:var(--card)}
+.leaflet-popup-content{font:15px/1.45 "Source Sans 3",system-ui,sans-serif}
+.leaflet-popup-content b{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.15rem}
+.pin{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 13px/1 "Source Sans 3",system-ui,sans-serif;border:3px solid #fffdf8;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.mlegend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:.92rem;color:var(--mut)}
+.mlegend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.places{columns:2 260px;margin:12px 0 0;padding-left:0;list-style:none;font-size:.95rem}.places li{margin:3px 0;break-inside:avoid}
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:.92rem;color:var(--mut)}
 .person{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:14px}
 .person header{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
@@ -104,6 +113,43 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
     <span><span class="badge kr">kronika</span> podle rodinné kroniky, zatím neověřeno v matrice</span>
     <span>bez pruhu = údaj od rodiny</span>
   </div>
+
+  <h2>Kde rod žil</h2>
+  <p class="lead">Všechna místa leží na pomezí Šumavy a Prachaticka, v okruhu asi 20 km. Čára ukazuje, jak se rod během 250 let stěhoval. Barva odpovídá době, číslo pořadí. Na značku se dá kliknout.</p>
+  <div id="mapa" role="img" aria-label="Mapa míst, kde žil rod Krejsů"></div>
+  <div class="mlegend"><span><i style="background:#8a5a2b"></i>18. století</span><span><i style="background:#2f6b3a"></i>1. pol. 19. století</span><span><i style="background:#3d5a8a"></i>2. pol. 19. století</span><span><i style="background:#9b3d5c"></i>20. století</span><span><i style="background:#9a9184"></i>okolí, souvislosti</span></div>
+  <ul class="places" id="mista"></ul>
+  <script>
+  (function(){
+    var M=[
+      [1,"Šumavské Hoštice čp. 16",49.0397,13.8719,"#8a5a2b","Rodný grunt: Martin Krejsa († 1785) a Johana. Soupis poddaných 1777."],
+      [2,"Chlumany čp. 41",49.0666,13.9654,"#8a5a2b","Matouš Krejsa a Marie Kotrcová, sňatek 8. 5. 1785; zde se 2. 3. 1790 narodil Josef Krejsa."],
+      [3,"Ostrov u Prachatic čp. 7",49.0286,14.0086,"#8a5a2b","Maunovi: Bartoloměj Maun a Dorota Varcabová; zde se roku 1788 narodila Terezie. (Poloha přibližná.)"],
+      [4,"Šumavské Hoštice čp. 12",49.0465,13.8805,"#2f6b3a","Josef Krejsa a Terezie Maunová (sňatek 1817); děti 1818–1829 včetně Kateřiny; 7. 3. 1829 Kateřina; 30. 9. 1852 nemanželský syn Josef."],
+      [5,"Předslavice čp. 1 a 20",49.1327,13.9356,"#3d5a8a","Josef Krejsa (* 1852): sňatek 1886, pak sedlák na čp. 20; 7. 11. 1890 syn Josef; 1891 dcera Marie †."],
+      [6,"Malenice čp. 41",49.1242,13.8889,"#3d5a8a","Drabešovi – rodina nevěsty Kateřiny Drabešové (kronika)."],
+      [7,"Úlehle čp. 3",49.1268,13.9258,"#9b3d5c","Zde se 25. 1. 1891 narodila Růžena Nečinová, žena Josefa (* 1890) (kronika)."],
+      [8,"Želibořice čp. 11",49.1177,13.9338,"#9b3d5c","Josef Krejsa (* 1890), panský kočí a hudebník (kronika)."],
+      [9,"Bušanovice",49.1045,13.9371,"#9b3d5c","Josef Krejsa, dědeček (podle rodiny); zde se narodila Helena."],
+      [0,"Vlachovo Březí",49.0818,13.9588,"#9a9184","Panství Dietrichsteinů do roku 1858 – souvislost s rodinnou tradicí o otci Josefa (* 1852)."]
+    ];
+    var ol=document.getElementById("mista");
+    M.forEach(function(m){var li=document.createElement("li");li.textContent=(m[0]?m[0]+". ":"")+m[1]+" – "+m[5];ol.appendChild(li)});
+    if(!window.L)return;
+    var map=L.map("mapa",{scrollWheelZoom:false});
+    L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",{maxZoom:15,attribution:"&copy; OpenStreetMap, SRTM | styl &copy; OpenTopoMap (CC-BY-SA)"}).addTo(map);
+    var path=M.filter(function(m){return m[0]}).sort(function(a,b){return a[0]-b[0]}).map(function(m){return [m[2],m[3]]});
+    L.polyline(path,{color:"#7a4a24",weight:3,opacity:.55,dashArray:"6 8"}).addTo(map);
+    var b=[];
+    M.forEach(function(m){
+      var ic=L.divIcon({className:"",html:'<div class="pin" style="background:'+m[4]+'">'+(m[0]||"·")+'</div>',iconSize:[34,34],iconAnchor:[17,17]});
+      var mk=L.marker([m[2],m[3]],{icon:ic,title:m[1]}).addTo(map);
+      var d=document.createElement("div");var t=document.createElement("b");t.textContent=m[1];d.appendChild(t);d.appendChild(document.createElement("br"));d.appendChild(document.createTextNode(m[5]));
+      mk.bindPopup(d);b.push([m[2],m[3]]);
+    });
+    map.fitBounds(b,{padding:[30,30]});
+  })();
+  </script>
 
   <h2>Osoby a zápisy</h2>
 
