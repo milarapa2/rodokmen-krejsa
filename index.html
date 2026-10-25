@@ -24,7 +24,7 @@ h3{font-size:1.35rem}
 .kick{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:600;margin:0 0 8px}
 .lead{max-width:62ch;color:var(--mut);margin:12px 0 0}
 a{color:var(--acc);text-underline-offset:3px}
-.tree{display:grid;gap:0;margin-top:20px;justify-items:center}
+.tree{display:grid;gap:0;margin-top:20px;justify-items:center;width:min(1240px,calc(100vw - 32px));position:relative;left:50%;transform:translateX(-50%)}
 .gen{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 .node{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:200px;max-width:280px;text-align:center}
 .node b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem;font-weight:600}
@@ -136,7 +136,7 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
     <div class="ln"></div>
     <div class="gen">
       <div class="pair"><div class="pl">rodiče Josefa (* 1890)</div><div class="pn">
-        <div class="node ok wide"><b>Josef Krejsa</b><span class="f"><i>*</i>30. 9. 1852 Hoštice čp. 12 (nemanželský)</span><span class="f"><i>†</i>mezi 1911 a 1921 (1921 je Kateřina vdova)</span><span class="f"><i>∞</i>1886 Kateřina Drabešová</span><span class="f"><i>⌂</i>bydliště podle pramenů:</span><span class="f tl">1852 Šumavské Hoštice čp. 12 – narozen u dědečka Josefa Krejsy, sedláka (kmotři = prarodiče)</span><span class="f tl">1862 matka se vdala do Dvorů u Lažišť; kde žil Josef (9 let), nevíme – možná u prarodičů na čp. 12 (domněnka, doklad chybí)</span><span class="f tl">1886 Předslavice čp. 1 – čeledín (oddací matrika, str. 81); čp. 1 patřilo 1910 faře</span><span class="f tl">1887–1891 Předslavice čp. 20 – narození dětí Marie (~1887, † 1891) a Josefa (1890); nejspíš jako nájemník nebo čeledín, ne majitel</span><span class="f tl">1910 Předslavice čp. 12 – dům hraběte Herbersteina; čeledín na velkostatku, s manželkou a synem; domovská obec Hoštice</span><span class="f tl">1921 už nežil – vdova Kateřina bydlí od 19. 5. 1919 u syna v Želibořicích čp. 1</span></div>
+        <div class="node ok"><b>Josef Krejsa</b><span class="f"><i>*</i>30. 9. 1852 Hoštice čp. 12 (nemanželský)</span><span class="f"><i>†</i>mezi 1911 a 1921 (1921 je Kateřina vdova)</span><span class="f"><i>∞</i>1886 Kateřina Drabešová</span><span class="f"><i>⌂</i>čeledín; bydliště viz níže</span></div>
       <div class="node ok"><b>Kateřina Drabešová</b><span class="f"><i>*</i>14. 3. 1851 Malenice čp. 41, pokřtěna 15. 3. (<a href="https://digi.ceskearchivy.cz/5441/328" rel="noopener">5441, sn. 328</a>); narozena před sňatkem rodičů, legitimována jejich sňatkem 3. 2. 1852 (5445, sn. 79). Sčítání uvádí 13. 3.</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>7. 1. 1886 Předslavice, Josef Krejsa (oddací matrika sv. 10, str. 81); bydlela v Předslavicích čp. 18</span><span class="f"><i>⌂</i>1910 Předslavice čp. 12; 1921 vdova u syna, Želibořice čp. 1</span></div>
       </div></div>
       <div class="pair"><div class="pl">rodiče Růženy Nečinové</div><div class="pn">
@@ -144,6 +144,7 @@ footer{margin-top:48px;color:var(--mut);font-size:.88rem;border-top:1px solid va
         <div class="node un"><b>Anežka Lafatová(?)</b><span class="f"><i>*</i>?; dcera Václava Lafaty(?), mlynáře v Čepřovicích čp. 34, a Barbory roz. Pilnáčkové z Čepřovic čp. 30</span><span class="f"><i>†</i>?</span><span class="f"><i>∞</i>Václav Nečina</span><span class="f"><i>⌂</i>Úlehle čp. 3</span></div>
       </div></div>
     </div>
+    <p class="sibs"><b>Josef (* 1852) – kde bydlel podle pramenů:</b><br>1852 Šumavské Hoštice čp. 12 – narozen u dědečka Josefa Krejsy, sedláka (kmotři = prarodiče)<br>1862 matka se vdala do Dvorů u Lažišť; kde žil Josef (9 let), nevíme – možná u prarodičů na čp. 12 (domněnka, doklad chybí)<br>1886 Předslavice čp. 1 – čeledín (oddací matrika, str. 81); čp. 1 patřilo 1910 faře<br>1887–1891 Předslavice čp. 20 – narození dětí Marie (~1887, † 1891) a Josefa (1890); nejspíš jako nájemník nebo čeledín, ne majitel<br>1910 Předslavice čp. 12 – dům hraběte Herbersteina; čeledín na velkostatku, s manželkou a synem; domovská obec Hoštice<br>1921 už nežil – vdova Kateřina bydlí od 19. 5. 1919 u syna v Želibořicích čp. 1</p>
     <p class="sibs">Sčítání 1910: matka syna Josefa je Kateřina (* 1857); „Marie“ v rejstříku je chyba.</p>
     <div class="ln"></div>
     <div class="gen">
